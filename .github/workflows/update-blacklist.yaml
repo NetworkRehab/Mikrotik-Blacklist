@@ -18,10 +18,10 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v2
 
-      - name: Run Bash Script
+      - name: Run blocklists-dl.sh
         run: |
-          chmod +x update_file.sh
-          ./update_file.sh
+          chmod +x blocklists-dl.sh
+          ./blocklists-dl.sh
         working-directory: ${{ github.workspace }}
 
       - name: Configure Git
@@ -36,7 +36,7 @@ jobs:
 
       - name: Commit and Push Changes
         run: |
-          git add path/to/your/file.txt
+          git add .
           git commit -m "Update file via GitHub Action"
           git push origin "${NEW_BRANCH}"
 
