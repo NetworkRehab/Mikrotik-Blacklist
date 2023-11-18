@@ -1,0 +1,47 @@
+name: Update File and Create PR Weekly
+
+on:
+  workflow_dispatch:  # Manual trigger
+  schedule:
+    - cron: '0 0 * * 0'  # Run every Sunday at midnight UTC
+
+jobs:
+  update-file:
+    runs-on: ubuntu-latest
+
+    env:
+      GIT_USER: ${{ secrets.GIT_USER }}
+      GIT_EMAIL: ${{ secrets.GIT_EMAIL }}
+      NEW_BRANCH: update-file-${{ github.run_number }}
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Run Bash Script
+        run: |
+          chmod +x update_file.sh
+          ./update_file.sh
+        working-directory: ${{ github.workspace }}
+
+      - name: Configure Git
+        run: |
+          git config user.name "${GIT_USER}"
+          git config user.email "${GIT_EMAIL}"
+
+      - name: Create and Checkout New Branch
+        run: |
+          git checkout -b "${NEW_BRANCH}"
+        working-directory: ${{ github.workspace }}
+
+      - name: Commit and Push Changes
+        run: |
+          git add path/to/your/file.txt
+          git commit -m "Update file via GitHub Action"
+          git push origin "${NEW_BRANCH}"
+
+      - name: Create Pull Request
+        run: |
+          gh pr create --base main --head "${NEW_BRANCH}" --title "Update file via GitHub Action" --body "This PR was automatically created by a GitHub Action."
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
