@@ -1,4 +1,4 @@
-# Updated: Sat Nov 18 21:30:43 UTC 2023
+# Updated: Sun Nov 19 00:05:47 UTC 2023
 /ip firewall address-list
 add list=mikrotik-blacklist address=0.0.0.0/8
 add list=mikrotik-blacklist address=1.10.16.0/20
