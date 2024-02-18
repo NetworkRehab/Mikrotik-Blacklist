@@ -1,9 +1,10 @@
-# Updated: Sun Nov 19 05:01:22 UTC 2023
+# Updated: Sun Nov 26 00:05:46 UTC 2023
 /ip firewall address-list
 add list=mikrotik-blacklist address=0.0.0.0/8
 add list=mikrotik-blacklist address=1.10.16.0/20
 add list=mikrotik-blacklist address=1.19.0.0/16
 add list=mikrotik-blacklist address=1.32.128.0/18
+add list=mikrotik-blacklist address=2.56.10.0/24
 add list=mikrotik-blacklist address=2.56.56.0/22
 add list=mikrotik-blacklist address=2.56.192.0/22
 add list=mikrotik-blacklist address=2.56.247.0/24
@@ -47,13 +48,15 @@ add list=mikrotik-blacklist address=27.126.160.0/20
 add list=mikrotik-blacklist address=27.146.0.0/16
 add list=mikrotik-blacklist address=31.24.81.0/24
 add list=mikrotik-blacklist address=31.41.244.0/24
-add list=mikrotik-blacklist address=31.210.20.0/23
+add list=mikrotik-blacklist address=31.210.20.0/24
 add list=mikrotik-blacklist address=31.210.22.0/24
 add list=mikrotik-blacklist address=31.217.252.0/24
 add list=mikrotik-blacklist address=31.222.236.0/24
 add list=mikrotik-blacklist address=36.0.8.0/21
 add list=mikrotik-blacklist address=36.37.48.0/20
-add list=mikrotik-blacklist address=36.50.0.0/19
+add list=mikrotik-blacklist address=36.50.10.0/23
+add list=mikrotik-blacklist address=36.50.12.0/22
+add list=mikrotik-blacklist address=36.50.16.0/20
 add list=mikrotik-blacklist address=36.50.64.0/18
 add list=mikrotik-blacklist address=36.50.128.0/17
 add list=mikrotik-blacklist address=36.116.0.0/16
@@ -64,6 +67,8 @@ add list=mikrotik-blacklist address=37.140.251.0/24
 add list=mikrotik-blacklist address=37.156.64.0/23
 add list=mikrotik-blacklist address=37.156.173.0/24
 add list=mikrotik-blacklist address=37.220.87.0/24
+add list=mikrotik-blacklist address=38.46.248.0/22
+add list=mikrotik-blacklist address=38.54.20.0/24
 add list=mikrotik-blacklist address=38.200.178.0/23
 add list=mikrotik-blacklist address=41.72.0.0/18
 add list=mikrotik-blacklist address=41.77.208.0/22
@@ -105,7 +110,6 @@ add list=mikrotik-blacklist address=43.249.88.0/22
 add list=mikrotik-blacklist address=43.249.124.0/22
 add list=mikrotik-blacklist address=43.250.116.0/22
 add list=mikrotik-blacklist address=43.252.224.0/22
-add list=mikrotik-blacklist address=45.9.74.0/24
 add list=mikrotik-blacklist address=45.14.226.0/24
 add list=mikrotik-blacklist address=45.15.40.0/24
 add list=mikrotik-blacklist address=45.15.156.0/24
@@ -141,10 +145,10 @@ add list=mikrotik-blacklist address=45.129.14.0/24
 add list=mikrotik-blacklist address=45.134.23.0/24
 add list=mikrotik-blacklist address=45.134.26.0/24
 add list=mikrotik-blacklist address=45.135.232.0/24
-add list=mikrotik-blacklist address=45.136.140.0/23
 add list=mikrotik-blacklist address=45.137.22.0/24
 add list=mikrotik-blacklist address=45.139.105.0/24
 add list=mikrotik-blacklist address=45.140.17.0/24
+add list=mikrotik-blacklist address=45.141.56.0/22
 add list=mikrotik-blacklist address=45.142.192.0/24
 add list=mikrotik-blacklist address=45.143.136.0/24
 add list=mikrotik-blacklist address=45.143.138.0/24
@@ -237,7 +241,6 @@ add list=mikrotik-blacklist address=69.8.96.0/20
 add list=mikrotik-blacklist address=72.46.24.0/22
 add list=mikrotik-blacklist address=74.80.191.0/24
 add list=mikrotik-blacklist address=74.114.148.0/22
-add list=mikrotik-blacklist address=77.73.133.0/24
 add list=mikrotik-blacklist address=77.73.134.0/24
 add list=mikrotik-blacklist address=77.81.84.0/23
 add list=mikrotik-blacklist address=77.81.86.0/24
@@ -246,7 +249,6 @@ add list=mikrotik-blacklist address=77.87.123.0/24
 add list=mikrotik-blacklist address=77.90.185.0/24
 add list=mikrotik-blacklist address=77.91.68.0/24
 add list=mikrotik-blacklist address=77.91.76.0/24
-add list=mikrotik-blacklist address=77.91.97.0/24
 add list=mikrotik-blacklist address=77.91.124.0/24
 add list=mikrotik-blacklist address=78.40.143.0/24
 add list=mikrotik-blacklist address=78.128.113.0/24
@@ -263,7 +265,6 @@ add list=mikrotik-blacklist address=80.208.192.0/20
 add list=mikrotik-blacklist address=82.135.156.0/23
 add list=mikrotik-blacklist address=82.135.228.0/22
 add list=mikrotik-blacklist address=83.175.0.0/18
-add list=mikrotik-blacklist address=83.217.11.0/24
 add list=mikrotik-blacklist address=83.218.218.0/24
 add list=mikrotik-blacklist address=84.238.160.0/22
 add list=mikrotik-blacklist address=85.121.39.0/24
@@ -271,6 +272,7 @@ add list=mikrotik-blacklist address=85.158.148.0/23
 add list=mikrotik-blacklist address=85.158.151.0/24
 add list=mikrotik-blacklist address=85.202.169.0/24
 add list=mikrotik-blacklist address=85.202.170.0/23
+add list=mikrotik-blacklist address=85.203.26.0/24
 add list=mikrotik-blacklist address=85.217.216.0/22
 add list=mikrotik-blacklist address=86.104.195.0/24
 add list=mikrotik-blacklist address=86.104.222.0/23
@@ -351,7 +353,6 @@ add list=mikrotik-blacklist address=89.45.82.0/24
 add list=mikrotik-blacklist address=89.46.47.0/24
 add list=mikrotik-blacklist address=89.248.163.0/24
 add list=mikrotik-blacklist address=89.248.165.0/24
-add list=mikrotik-blacklist address=91.103.252.0/23
 add list=mikrotik-blacklist address=91.109.176.0/20
 add list=mikrotik-blacklist address=91.132.164.0/22
 add list=mikrotik-blacklist address=91.191.209.0/24
@@ -379,6 +380,7 @@ add list=mikrotik-blacklist address=91.243.93.0/24
 add list=mikrotik-blacklist address=91.246.43.0/24
 add list=mikrotik-blacklist address=92.63.196.0/23
 add list=mikrotik-blacklist address=92.87.6.0/24
+add list=mikrotik-blacklist address=93.90.74.0/24
 add list=mikrotik-blacklist address=93.95.27.0/24
 add list=mikrotik-blacklist address=93.114.51.0/24
 add list=mikrotik-blacklist address=93.114.52.0/23
@@ -390,7 +392,6 @@ add list=mikrotik-blacklist address=93.119.120.0/23
 add list=mikrotik-blacklist address=94.102.61.0/24
 add list=mikrotik-blacklist address=94.131.220.0/23
 add list=mikrotik-blacklist address=94.131.228.0/22
-add list=mikrotik-blacklist address=94.142.138.0/24
 add list=mikrotik-blacklist address=95.161.128.0/23
 add list=mikrotik-blacklist address=95.214.24.0/22
 add list=mikrotik-blacklist address=100.64.0.0/10
@@ -403,9 +404,8 @@ add list=mikrotik-blacklist address=101.248.0.0/15
 add list=mikrotik-blacklist address=102.192.0.0/12
 add list=mikrotik-blacklist address=102.208.0.0/15
 add list=mikrotik-blacklist address=102.210.0.0/17
-add list=mikrotik-blacklist address=102.210.128.0/20
+add list=mikrotik-blacklist address=102.210.136.0/21
 add list=mikrotik-blacklist address=102.210.158.0/23
-add list=mikrotik-blacklist address=102.210.169.0/24
 add list=mikrotik-blacklist address=102.221.75.0/24
 add list=mikrotik-blacklist address=102.240.0.0/16
 add list=mikrotik-blacklist address=103.4.32.0/22
@@ -433,6 +433,7 @@ add list=mikrotik-blacklist address=103.71.208.0/21
 add list=mikrotik-blacklist address=103.71.216.0/22
 add list=mikrotik-blacklist address=103.71.244.0/22
 add list=mikrotik-blacklist address=103.75.36.0/22
+add list=mikrotik-blacklist address=103.77.15.0/24
 add list=mikrotik-blacklist address=103.77.184.0/24
 add list=mikrotik-blacklist address=103.80.132.0/22
 add list=mikrotik-blacklist address=103.81.44.0/22
@@ -442,11 +443,14 @@ add list=mikrotik-blacklist address=103.95.180.0/22
 add list=mikrotik-blacklist address=103.95.205.0/24
 add list=mikrotik-blacklist address=103.98.12.0/23
 add list=mikrotik-blacklist address=103.109.107.0/24
+add list=mikrotik-blacklist address=103.117.84.0/22
 add list=mikrotik-blacklist address=103.122.79.0/24
 add list=mikrotik-blacklist address=103.126.241.0/24
 add list=mikrotik-blacklist address=103.129.13.0/24
 add list=mikrotik-blacklist address=103.129.14.0/23
 add list=mikrotik-blacklist address=103.134.226.0/23
+add list=mikrotik-blacklist address=103.141.37.0/24
+add list=mikrotik-blacklist address=103.142.120.0/23
 add list=mikrotik-blacklist address=103.142.150.0/23
 add list=mikrotik-blacklist address=103.142.152.0/23
 add list=mikrotik-blacklist address=103.143.248.0/23
@@ -455,6 +459,7 @@ add list=mikrotik-blacklist address=103.148.42.0/24
 add list=mikrotik-blacklist address=103.151.172.0/23
 add list=mikrotik-blacklist address=103.152.125.0/24
 add list=mikrotik-blacklist address=103.153.254.0/23
+add list=mikrotik-blacklist address=103.154.192.0/23
 add list=mikrotik-blacklist address=103.155.58.0/23
 add list=mikrotik-blacklist address=103.155.60.0/23
 add list=mikrotik-blacklist address=103.157.75.0/24
@@ -467,12 +472,14 @@ add list=mikrotik-blacklist address=103.166.2.0/24
 add list=mikrotik-blacklist address=103.167.40.0/23
 add list=mikrotik-blacklist address=103.168.162.0/24
 add list=mikrotik-blacklist address=103.170.218.0/23
+add list=mikrotik-blacklist address=103.172.218.0/23
 add list=mikrotik-blacklist address=103.174.154.0/23
 add list=mikrotik-blacklist address=103.184.144.0/23
 add list=mikrotik-blacklist address=103.184.162.0/23
 add list=mikrotik-blacklist address=103.184.172.0/23
 add list=mikrotik-blacklist address=103.186.116.0/23
 add list=mikrotik-blacklist address=103.192.228.0/22
+add list=mikrotik-blacklist address=103.193.180.0/22
 add list=mikrotik-blacklist address=103.193.240.0/22
 add list=mikrotik-blacklist address=103.199.88.0/22
 add list=mikrotik-blacklist address=103.204.60.0/22
@@ -496,6 +503,7 @@ add list=mikrotik-blacklist address=103.241.197.0/24
 add list=mikrotik-blacklist address=103.242.4.0/22
 add list=mikrotik-blacklist address=103.243.240.0/22
 add list=mikrotik-blacklist address=103.248.68.0/22
+add list=mikrotik-blacklist address=103.249.224.0/23
 add list=mikrotik-blacklist address=103.250.172.0/22
 add list=mikrotik-blacklist address=103.251.46.0/24
 add list=mikrotik-blacklist address=103.252.124.0/22
@@ -504,6 +512,7 @@ add list=mikrotik-blacklist address=104.129.5.0/24
 add list=mikrotik-blacklist address=104.129.60.0/24
 add list=mikrotik-blacklist address=104.193.228.0/22
 add list=mikrotik-blacklist address=104.223.15.0/24
+add list=mikrotik-blacklist address=104.223.16.0/24
 add list=mikrotik-blacklist address=104.223.134.0/24
 add list=mikrotik-blacklist address=104.223.222.0/24
 add list=mikrotik-blacklist address=104.243.192.0/20
@@ -513,7 +522,7 @@ add list=mikrotik-blacklist address=106.95.0.0/16
 add list=mikrotik-blacklist address=107.150.4.0/22
 add list=mikrotik-blacklist address=107.155.224.0/22
 add list=mikrotik-blacklist address=107.179.97.0/24
-add list=mikrotik-blacklist address=107.182.128.0/22
+add list=mikrotik-blacklist address=107.182.128.0/24
 add list=mikrotik-blacklist address=107.182.240.0/20
 add list=mikrotik-blacklist address=109.107.146.0/24
 add list=mikrotik-blacklist address=109.107.182.0/24
@@ -688,6 +697,7 @@ add list=mikrotik-blacklist address=155.35.232.0/24
 add list=mikrotik-blacklist address=155.66.0.0/16
 add list=mikrotik-blacklist address=155.71.0.0/16
 add list=mikrotik-blacklist address=155.73.0.0/16
+add list=mikrotik-blacklist address=155.94.140.0/24
 add list=mikrotik-blacklist address=155.94.154.0/24
 add list=mikrotik-blacklist address=155.94.163.0/24
 add list=mikrotik-blacklist address=155.94.178.0/24
@@ -775,6 +785,7 @@ add list=mikrotik-blacklist address=160.250.0.0/16
 add list=mikrotik-blacklist address=161.0.0.0/19
 add list=mikrotik-blacklist address=161.0.68.0/22
 add list=mikrotik-blacklist address=161.1.0.0/16
+add list=mikrotik-blacklist address=161.60.0.0/16
 add list=mikrotik-blacklist address=161.248.0.0/16
 add list=mikrotik-blacklist address=162.4.0.0/16
 add list=mikrotik-blacklist address=162.12.204.0/23
@@ -837,7 +848,7 @@ add list=mikrotik-blacklist address=164.79.0.0/16
 add list=mikrotik-blacklist address=164.88.0.0/16
 add list=mikrotik-blacklist address=164.137.0.0/16
 add list=mikrotik-blacklist address=164.155.0.0/16
-add list=mikrotik-blacklist address=164.215.102.0/24
+add list=mikrotik-blacklist address=164.215.102.0/23
 add list=mikrotik-blacklist address=165.3.0.0/16
 add list=mikrotik-blacklist address=165.25.0.0/16
 add list=mikrotik-blacklist address=165.99.0.0/16
@@ -945,7 +956,6 @@ add list=mikrotik-blacklist address=179.43.142.0/24
 add list=mikrotik-blacklist address=179.43.149.0/24
 add list=mikrotik-blacklist address=179.43.162.0/24
 add list=mikrotik-blacklist address=179.43.175.0/24
-add list=mikrotik-blacklist address=180.94.0.0/19
 add list=mikrotik-blacklist address=180.101.88.0/24
 add list=mikrotik-blacklist address=180.148.8.0/22
 add list=mikrotik-blacklist address=180.148.24.0/22
@@ -976,7 +986,8 @@ add list=mikrotik-blacklist address=185.110.0.0/22
 add list=mikrotik-blacklist address=185.116.172.0/23
 add list=mikrotik-blacklist address=185.116.175.0/24
 add list=mikrotik-blacklist address=185.120.8.0/22
-add list=mikrotik-blacklist address=185.121.120.0/22
+add list=mikrotik-blacklist address=185.121.120.0/23
+add list=mikrotik-blacklist address=185.121.122.0/24
 add list=mikrotik-blacklist address=185.122.128.0/22
 add list=mikrotik-blacklist address=185.124.56.0/21
 add list=mikrotik-blacklist address=185.127.44.0/22
@@ -991,6 +1002,7 @@ add list=mikrotik-blacklist address=185.134.48.0/22
 add list=mikrotik-blacklist address=185.144.180.0/22
 add list=mikrotik-blacklist address=185.147.140.0/22
 add list=mikrotik-blacklist address=185.156.73.0/24
+add list=mikrotik-blacklist address=185.159.247.0/24
 add list=mikrotik-blacklist address=185.161.148.0/22
 add list=mikrotik-blacklist address=185.165.24.0/22
 add list=mikrotik-blacklist address=185.172.128.0/24
@@ -999,7 +1011,6 @@ add list=mikrotik-blacklist address=185.193.89.0/24
 add list=mikrotik-blacklist address=185.193.90.0/24
 add list=mikrotik-blacklist address=185.215.113.0/24
 add list=mikrotik-blacklist address=185.215.132.0/22
-add list=mikrotik-blacklist address=185.216.68.0/24
 add list=mikrotik-blacklist address=185.216.70.0/24
 add list=mikrotik-blacklist address=185.221.67.0/24
 add list=mikrotik-blacklist address=185.222.58.0/24
@@ -1102,6 +1113,7 @@ add list=mikrotik-blacklist address=192.103.132.0/24
 add list=mikrotik-blacklist address=192.104.40.0/24
 add list=mikrotik-blacklist address=192.104.80.0/24
 add list=mikrotik-blacklist address=192.104.252.0/24
+add list=mikrotik-blacklist address=192.109.200.0/23
 add list=mikrotik-blacklist address=192.122.210.0/24
 add list=mikrotik-blacklist address=192.124.24.0/24
 add list=mikrotik-blacklist address=192.132.100.0/24
@@ -1230,12 +1242,13 @@ add list=mikrotik-blacklist address=194.31.96.0/24
 add list=mikrotik-blacklist address=194.32.236.0/24
 add list=mikrotik-blacklist address=194.33.191.0/24
 add list=mikrotik-blacklist address=194.41.60.0/23
+add list=mikrotik-blacklist address=194.49.94.0/24
 add list=mikrotik-blacklist address=194.55.227.0/24
 add list=mikrotik-blacklist address=194.56.212.0/23
 add list=mikrotik-blacklist address=194.59.216.0/22
-add list=mikrotik-blacklist address=194.85.249.0/24
 add list=mikrotik-blacklist address=194.87.200.0/24
-add list=mikrotik-blacklist address=194.99.44.0/22
+add list=mikrotik-blacklist address=194.99.44.0/23
+add list=mikrotik-blacklist address=194.99.47.0/24
 add list=mikrotik-blacklist address=194.169.175.0/24
 add list=mikrotik-blacklist address=195.14.98.0/24
 add list=mikrotik-blacklist address=195.22.149.0/24
@@ -1244,7 +1257,6 @@ add list=mikrotik-blacklist address=195.88.104.0/23
 add list=mikrotik-blacklist address=195.88.146.0/23
 add list=mikrotik-blacklist address=195.133.38.0/23
 add list=mikrotik-blacklist address=195.181.224.0/20
-add list=mikrotik-blacklist address=195.210.33.0/24
 add list=mikrotik-blacklist address=195.210.96.0/19
 add list=mikrotik-blacklist address=195.211.124.0/22
 add list=mikrotik-blacklist address=196.1.108.0/23
@@ -1613,7 +1625,6 @@ add list=mikrotik-blacklist address=203.31.93.0/24
 add list=mikrotik-blacklist address=203.31.125.0/24
 add list=mikrotik-blacklist address=203.31.169.0/24
 add list=mikrotik-blacklist address=203.31.210.0/24
-add list=mikrotik-blacklist address=203.32.26.0/24
 add list=mikrotik-blacklist address=203.32.86.0/23
 add list=mikrotik-blacklist address=203.32.188.0/24
 add list=mikrotik-blacklist address=203.33.96.0/22
@@ -1638,8 +1649,6 @@ add list=mikrotik-blacklist address=203.100.62.0/24
 add list=mikrotik-blacklist address=203.114.236.0/22
 add list=mikrotik-blacklist address=203.119.56.0/24
 add list=mikrotik-blacklist address=203.134.250.0/23
-add list=mikrotik-blacklist address=203.145.58.0/23
-add list=mikrotik-blacklist address=203.145.60.0/22
 add list=mikrotik-blacklist address=203.169.52.0/22
 add list=mikrotik-blacklist address=203.170.25.0/24
 add list=mikrotik-blacklist address=203.170.90.0/23
@@ -1685,7 +1694,6 @@ add list=mikrotik-blacklist address=204.88.160.0/20
 add list=mikrotik-blacklist address=204.89.202.0/24
 add list=mikrotik-blacklist address=204.89.224.0/24
 add list=mikrotik-blacklist address=204.91.96.0/20
-add list=mikrotik-blacklist address=204.91.136.0/21
 add list=mikrotik-blacklist address=204.106.128.0/18
 add list=mikrotik-blacklist address=204.106.192.0/19
 add list=mikrotik-blacklist address=204.107.132.0/24
@@ -1727,6 +1735,7 @@ add list=mikrotik-blacklist address=204.225.210.0/24
 add list=mikrotik-blacklist address=204.227.32.0/19
 add list=mikrotik-blacklist address=204.232.0.0/18
 add list=mikrotik-blacklist address=204.235.16.0/20
+add list=mikrotik-blacklist address=204.236.0.0/19
 add list=mikrotik-blacklist address=204.238.35.0/24
 add list=mikrotik-blacklist address=204.238.40.0/24
 add list=mikrotik-blacklist address=204.238.137.0/24
