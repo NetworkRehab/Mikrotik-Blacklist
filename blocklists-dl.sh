@@ -1,10 +1,15 @@
 #!/bin/bash
 
+# Configuration options
+BLACKLIST_URL="https://iplists.firehol.org/files/firehol_level1.netset"
+ADDRESS_LIST_NAME="mikrotik-blacklist"
+OUTPUT_FILE="mikrotik-blacklist.rsc"
+
 # Get the current date and time
 datetime=$(date)
 
-# Download the blacklist
-if wget -q https://iplists.firehol.org/files/firehol_level1.netset -O firehol_level1.netset; then
+# Download the blacklist with retries and timeout
+if wget -q --timeout=30 --tries=3 "$BLACKLIST_URL" -O firehol_level1.netset; then
     echo "Blacklist downloaded successfully."
 else
     echo "Failed to download the blacklist. Exiting."
@@ -12,19 +17,16 @@ else
 fi
 
 # Create the MikroTik RouterOS script
-echo "# Updated: $datetime" > mikrotik-blacklist.rsc
-echo "/ip firewall address-list" >> mikrotik-blacklist.rsc
+{
+    echo "# Updated: $datetime"
+    echo "/ip firewall address-list"
+} > "$OUTPUT_FILE"
 
 # Process the blacklist
-iplist=$(grep -E "^(([0-9]|[1-9][0-9]|1[0-9]{2}|2[0-4][0-9]|25[0-5])\.){3}([0-9]|[1-9][0-9]|1[0-9]{2}|2[0-4][0-9]|25[0-5])(\/(3[0-2]|[1-2][0-9]|[0-9]))$" firehol_level1.netset)
-
-i=1
-while read -r n; do 
-  echo "add list=mikrotik-blacklist address=$n" >> mikrotik-blacklist.rsc 
-  i=$((i+1))
-done <<< "$iplist"
+while read -r n; do
+    echo "add list=$ADDRESS_LIST_NAME address=$n" >> "$OUTPUT_FILE"
+done < firehol_level1.netset
 
 # Clean up the downloaded file
 rm -f firehol_level1.netset
-
 echo "Blacklist processing completed."

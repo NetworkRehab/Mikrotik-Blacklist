@@ -1,19 +1,13 @@
-name: Update File and Create PR Weekly
+name: Update Blacklist and Create PR Weekly
 
 on:
-  workflow_dispatch:  # Manual trigger
+  workflow_dispatch:
   schedule:
-    - cron: '0 0 * * 0'  # Run every Sunday at midnight UTC
+    - cron: '0 0 * * 0'
 
 jobs:
-  update-file:
+  update-blacklist:
     runs-on: ubuntu-latest
-
-    env:
-      GIT_USER: ${{ secrets.GIT_USER }}
-      GIT_EMAIL: ${{ secrets.GIT_EMAIL }}
-      NEW_BRANCH: update-file-${{ github.run_number }}
-
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
@@ -22,26 +16,18 @@ jobs:
         run: |
           chmod +x blocklists-dl.sh
           ./blocklists-dl.sh
-        working-directory: ${{ github.workspace }}
-
-      - name: Configure Git
-        run: |
-          git config user.name "${GIT_USER}"
-          git config user.email "${GIT_EMAIL}"
-
-      - name: Create and Checkout New Branch
-        run: |
-          git checkout -b "${NEW_BRANCH}"
-        working-directory: ${{ github.workspace }}
 
       - name: Commit and Push Changes
-        run: |
-          git add .
-          git commit -m "Update file via GitHub Action"
-          git push origin "${NEW_BRANCH}"
+        uses: EndBug/add-and-commit@v9
+        with:
+          author_name: "${{ github.actor }}"
+          author_email: "${{ github.actor }}@users.noreply.github.com"
+          message: "Update blacklist via GitHub Action"
+          add: "mikrotik-blacklist.rsc"
 
       - name: Create Pull Request
-        run: |
-          gh pr create --base main --head "${NEW_BRANCH}" --title "Update file via GitHub Action" --body "This PR was automatically created by a GitHub Action."
-        env:
-          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        uses: peter-evans/create-pull-request@v5
+        with:
+          branch: update-blacklist
+          title: "Update blacklist via GitHub Action"
+          commit-message: "Update blacklist via GitHub Action"
