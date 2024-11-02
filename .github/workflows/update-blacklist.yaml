@@ -33,3 +33,4 @@ jobs:
           base: main
           title: "Update blacklist via GitHub Action"
           commit-message: "Update blacklist via GitHub Action"
+          delete-branch: true
