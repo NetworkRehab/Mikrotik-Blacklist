@@ -30,5 +30,6 @@ jobs:
         uses: peter-evans/create-pull-request@v5
         with:
           branch: update-blacklist
+          base: main
           title: "Update blacklist via GitHub Action"
           commit-message: "Update blacklist via GitHub Action"
